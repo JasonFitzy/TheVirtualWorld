@@ -1,0 +1,60 @@
+/*
+* This is for Milestone 1, the MyClone Class. This is for the human object 
+*inside of the virtual world I will create for IT 511.
+ */
+package mileStone1;
+
+/**
+ * @author jfitzpatrick
+ */
+public class MyClone {
+
+    private  String firstName;
+    private  String lastName;
+    
+    public MyClone(String firstName, String lastName){
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        //this.firstName = firstName;
+        //this.lastName = lastName;
+    }
+    
+    public MyClone() {
+    this.firstName = "";
+    this.lastName = "";
+}
+    
+    public String getFirstName(){
+        return this.firstName;
+    }
+    
+    public String getLastName() {
+        return this.lastName;
+    }
+    
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    
+    @Override
+    public String toString() {
+        if(this.firstName.equals("") && this.lastName.equals("")) {
+            return "No Name";
+        }
+        return this.firstName + " " + this.lastName;
+    }
+    
+    public static void main(String[] args) {
+       MyClone me = new MyClone("Jason", "Fitzpatrick");
+       // MyClone him = new MyClone();//Testing setting another variable to use toString Method
+        //me.setLastName("Foo"); //this is a way to set the lastName again
+        System.out.print("The name of the peson inside of this machine is "); //testing set variables
+        System.out.println(me.toString()); //testing set variables
+       // System.out.println(him.toString());//Outputing toString method using him viariable which has no value so
+       //it outputs "No Name" as set up in toString Method.
+    }
+}
